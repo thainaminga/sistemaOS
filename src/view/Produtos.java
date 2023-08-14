@@ -68,7 +68,7 @@ public class Produtos extends JDialog {
 	private JTextField txtValor;
 	private JComboBox cboMedida;
 	private JTextField txtIDFor;
-	private JList listProd;
+	private JList listProdf;
 	private JScrollPane scrollPaneProd;
 	private JButton btnAdicionar;
 	private JButton btnEditar;
@@ -154,15 +154,15 @@ public class Produtos extends JDialog {
 		scrollPaneProd.setBounds(471, 104, 170, 23);
 		getContentPane().add(scrollPaneProd);
 
-		listProd = new JList();
-		listProd.setBackground(new Color(192, 192, 192));
-		listProd.addMouseListener(new MouseAdapter() {
+		listProdf = new JList();
+		listProdf.setBackground(new Color(192, 192, 192));
+		listProdf.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				buscarForLista();
 			}
 		});
-		scrollPaneProd.setViewportView(listProd);
+		scrollPaneProd.setViewportView(listProdf);
 		btnFoto.setForeground(new Color(0, 0, 0));
 		btnFoto.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		btnFoto.setBounds(789, 412, 141, 23);
@@ -362,7 +362,7 @@ public class Produtos extends JDialog {
 		txtIDFor.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent e) {
-				listarClientes();
+				buscarForLista();
 			}
 		});
 		txtIDFor.setFont(new Font("Arial", Font.PLAIN, 16));
@@ -652,36 +652,12 @@ public class Produtos extends JDialog {
 
 	}
 
-	private void listarClientes() {
-		DefaultListModel<String> modelo = new DefaultListModel<>();
-
-		listProd.setModel(modelo);
-
-		String readLista = "select * from produtos where idfor like '" + txtIDFor.getText() + "%'" + "order by idfor";
-		try {
-			con = dao.conectar();
-			pst = con.prepareStatement(readLista);
-			rs = pst.executeQuery();
-
-			while (rs.next()) {
-				modelo.addElement(rs.getString(10));
-				scrollPaneProd.setVisible(true);
-
-				if (txtIDFor.getText().isEmpty()) {
-					scrollPaneProd.setVisible(false);
-				}
-			}
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-	}
-
 	private void buscarForLista() {
-		int linha = listProd.getSelectedIndex();
+		int linha = listProdf.getSelectedIndex();
 
 		if (linha >= 0) {
 
-			String readBuscaLista = "select *from fornecedores where idfor like '" + txtIDFor.getText() + "%'"
+			String readBuscaLista = "select *from produtos where idfor like '" + txtIDFor.getText() + "%'"
 
 					+ "order by idfor limit " + (linha) + " ,1";
 
