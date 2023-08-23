@@ -35,6 +35,7 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JCheckBox;
 import javax.swing.border.EmptyBorder;
+import javax.swing.UIManager;
 
 public class Usuarios extends JDialog {
 
@@ -106,27 +107,32 @@ public class Usuarios extends JDialog {
 		getContentPane().add(lblNewLabel);
 
 		JLabel lblNewLabel_1 = new JLabel("ID");
+		lblNewLabel_1.setForeground(new Color(192, 192, 192));
 		lblNewLabel_1.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblNewLabel_1.setBounds(168, 40, 63, 14);
 		getContentPane().add(lblNewLabel_1);
 
 		JLabel lblNewLabel_2 = new JLabel("Nome");
+		lblNewLabel_2.setForeground(new Color(192, 192, 192));
 		lblNewLabel_2.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblNewLabel_2.setBounds(168, 117, 63, 28);
 		getContentPane().add(lblNewLabel_2);
 
 		JLabel lblNewLabel_3 = new JLabel("Login");
+		lblNewLabel_3.setForeground(new Color(192, 192, 192));
 		lblNewLabel_3.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblNewLabel_3.setBounds(168, 78, 63, 28);
 		getContentPane().add(lblNewLabel_3);
 
 		JLabel lblNewLabel_4 = new JLabel("Senha");
+		lblNewLabel_4.setForeground(new Color(192, 192, 192));
 		lblNewLabel_4.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblNewLabel_4.setBounds(168, 191, 63, 14);
 		getContentPane().add(lblNewLabel_4);
 
 		txtID = new JTextField();
-		txtID.setBackground(new Color(192, 192, 192));
+		txtID.setForeground(new Color(192, 192, 192));
+		txtID.setBackground(new Color(169, 169, 169));
 		txtID.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtID.setEditable(false);
 		txtID.setBounds(229, 38, 150, 20);
@@ -134,7 +140,7 @@ public class Usuarios extends JDialog {
 		txtID.setColumns(10);
 
 		txtNome = new JTextField();
-		txtNome.setBackground(new Color(192, 192, 192));
+		txtNome.setBackground(new Color(169, 169, 169));
 		txtNome.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtNome.addKeyListener(new KeyAdapter() {
 
@@ -145,7 +151,7 @@ public class Usuarios extends JDialog {
 			}
 
 		});
-		txtNome.setForeground(Color.RED);
+		txtNome.setForeground(new Color(192, 192, 192));
 		txtNome.setCaretColor(Color.RED);
 		txtNome.setBounds(229, 122, 311, 20);
 		getContentPane().add(txtNome);
@@ -154,7 +160,8 @@ public class Usuarios extends JDialog {
 		txtNome.setDocument(new Validador(30));
 
 		txtLogin = new JTextField();
-		txtLogin.setBackground(new Color(192, 192, 192));
+		txtLogin.setForeground(new Color(192, 192, 192));
+		txtLogin.setBackground(new Color(169, 169, 169));
 		txtLogin.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtLogin.setBounds(229, 83, 311, 20);
 		getContentPane().add(txtLogin);
@@ -251,7 +258,8 @@ public class Usuarios extends JDialog {
 		getContentPane().add(btnDeletar);
 
 		txtSenha2 = new JPasswordField();
-		txtSenha2.setBackground(new Color(192, 192, 192));
+		txtSenha2.setForeground(new Color(192, 192, 192));
+		txtSenha2.setBackground(new Color(169, 169, 169));
 		txtSenha2.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtSenha2.setEnabled(false);
 		txtSenha2.setBounds(229, 189, 150, 20);
@@ -285,6 +293,7 @@ public class Usuarios extends JDialog {
 		getContentPane().add(lblNewLabel_5);
 		
 		chckSenha = new JCheckBox("Alterar senha");
+		chckSenha.setForeground(new Color(192, 192, 192));
 		chckSenha.setBackground(new Color(128, 128, 128));
 		chckSenha.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

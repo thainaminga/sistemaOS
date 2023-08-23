@@ -30,6 +30,7 @@ import javax.swing.ImageIcon;
 import java.awt.Cursor;
 import javax.swing.JPanel;
 import java.awt.Color;
+import javax.swing.JLabel;
 
 public class Relatorios extends JDialog {
 	
@@ -64,7 +65,7 @@ public class Relatorios extends JDialog {
 	 * Create the dialog.
 	 */
 	public Relatorios() {
-		getContentPane().setBackground(new Color(64, 128, 128));
+		getContentPane().setBackground(new Color(128, 128, 128));
 		setTitle("Relatórios");
 		setResizable(false);
 		setModal(true);
@@ -93,6 +94,16 @@ public class Relatorios extends JDialog {
 		btnServicos.setIcon(new ImageIcon(Relatorios.class.getResource("/img/4308338_card_checklist_file_invoice_report_icon.png")));
 		btnServicos.setBounds(309, 101, 48, 48);
 		getContentPane().add(btnServicos);
+		
+		JLabel lblNewLabel = new JLabel("Fixa de Clientes");
+		lblNewLabel.setForeground(new Color(192, 192, 192));
+		lblNewLabel.setBounds(59, 65, 98, 31);
+		getContentPane().add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Fixa de Serviços");
+		lblNewLabel_1.setForeground(new Color(192, 192, 192));
+		lblNewLabel_1.setBounds(290, 65, 108, 31);
+		getContentPane().add(lblNewLabel_1);
 
 	}//FIM contrutor
 	

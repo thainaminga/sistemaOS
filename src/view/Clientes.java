@@ -39,6 +39,7 @@ import java.awt.event.MouseEvent;
 import java.awt.SystemColor;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.UIManager;
 
 public class Clientes extends JDialog {
 	private JTextField txtID;
@@ -87,6 +88,7 @@ public class Clientes extends JDialog {
 	 * Create the dialog.
 	 */
 	public Clientes() {
+		setTitle("Clientes");
 		getContentPane().addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -113,24 +115,28 @@ public class Clientes extends JDialog {
 						scrollPaneClientes.setViewportView(listClientes);
 
 		JLabel lblID = new JLabel("ID");
+		lblID.setForeground(new Color(192, 192, 192));
 		lblID.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblID.setBounds(32, 39, 48, 14);
 		getContentPane().add(lblID);
 
 		txtID = new JTextField();
+		txtID.setForeground(new Color(192, 192, 192));
 		txtID.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtID.setEditable(false);
 		txtID.setColumns(10);
-		txtID.setBackground(new Color(126, 134, 143));
+		txtID.setBackground(new Color(169, 169, 169));
 		txtID.setBounds(110, 37, 146, 20);
 		getContentPane().add(txtID);
 
 		JLabel lblNome = new JLabel("Nome*");
+		lblNome.setForeground(new Color(192, 192, 192));
 		lblNome.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblNome.setBounds(32, 84, 92, 14);
 		getContentPane().add(lblNome);
 
 		txtNome = new JTextField();
+		txtNome.setForeground(new Color(192, 192, 192));
 		txtNome.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtNome.addKeyListener(new KeyAdapter() {
 			@Override
@@ -139,18 +145,20 @@ public class Clientes extends JDialog {
 			}
 		});
 		txtNome.setColumns(10);
-		txtNome.setBackground(new Color(126, 134, 143));
+		txtNome.setBackground(new Color(169, 169, 169));
 		txtNome.setBounds(110, 82, 409, 20);
 		getContentPane().add(txtNome);
 
 		txtNome.setDocument(new Validador(40));
 
 		JLabel lblRG = new JLabel("RG*");
+		lblRG.setForeground(new Color(192, 192, 192));
 		lblRG.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblRG.setBounds(32, 126, 67, 14);
 		getContentPane().add(lblRG);
 
 		txtRG = new JTextField();
+		txtRG.setForeground(new Color(192, 192, 192));
 		txtRG.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtRG.addKeyListener(new KeyAdapter() {
 			@Override
@@ -163,7 +171,7 @@ public class Clientes extends JDialog {
 			}
 		});
 		txtRG.setColumns(10);
-		txtRG.setBackground(new Color(126, 134, 143));
+		txtRG.setBackground(new Color(169, 169, 169));
 		txtRG.setBounds(110, 124, 188, 20);
 		getContentPane().add(txtRG);
 
@@ -194,11 +202,13 @@ public class Clientes extends JDialog {
 		txtCPF.setDocument(new Validador(11));
 
 		JLabel lblFone = new JLabel("Telefone*");
+		lblFone.setForeground(new Color(192, 192, 192));
 		lblFone.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblFone.setBounds(592, 126, 135, 14);
 		getContentPane().add(lblFone);
 
 		txtFone = new JTextField();
+		txtFone.setForeground(new Color(192, 192, 192));
 		txtFone.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtFone.addKeyListener(new KeyAdapter() {
 			@Override
@@ -210,35 +220,39 @@ public class Clientes extends JDialog {
 			}
 		});
 		txtFone.setColumns(10);
-		txtFone.setBackground(new Color(126, 134, 143));
+		txtFone.setBackground(new Color(169, 169, 169));
 		txtFone.setBounds(669, 124, 136, 20);
 		getContentPane().add(txtFone);
 
 		txtFone.setDocument(new Validador(10));
 
 		JLabel lblEndereco = new JLabel("Endereço*");
+		lblEndereco.setForeground(new Color(192, 192, 192));
 		lblEndereco.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblEndereco.setBounds(32, 216, 134, 14);
 		getContentPane().add(lblEndereco);
 
 		txtEndereco = new JTextField();
+		txtEndereco.setForeground(new Color(192, 192, 192));
 		txtEndereco.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtEndereco.setColumns(10);
-		txtEndereco.setBackground(new Color(126, 134, 143));
+		txtEndereco.setBackground(new Color(169, 169, 169));
 		txtEndereco.setBounds(110, 214, 459, 20);
 		getContentPane().add(txtEndereco);
 
 		txtEndereco.setDocument(new Validador(50));
 
 		JLabel lblEmail = new JLabel("E-mail");
+		lblEmail.setForeground(new Color(192, 192, 192));
 		lblEmail.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblEmail.setBounds(32, 169, 124, 14);
 		getContentPane().add(lblEmail);
 
 		txtEmail = new JTextField();
+		txtEmail.setForeground(new Color(192, 192, 192));
 		txtEmail.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtEmail.setColumns(10);
-		txtEmail.setBackground(new Color(126, 134, 143));
+		txtEmail.setBackground(new Color(169, 169, 169));
 		txtEmail.setBounds(110, 167, 459, 20);
 		getContentPane().add(txtEmail);
 
@@ -308,7 +322,8 @@ public class Clientes extends JDialog {
 		getContentPane().add(btnApagar);
 
 		txtCep = new JTextField();
-		txtCep.setBackground(new Color(126, 134, 143));
+		txtCep.setForeground(new Color(192, 192, 192));
+		txtCep.setBackground(new Color(169, 169, 169));
 		txtCep.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtCep.addKeyListener(new KeyAdapter() {
 			@Override
@@ -326,22 +341,26 @@ public class Clientes extends JDialog {
 		txtCep.setDocument(new Validador(8));
 
 		JLabel lblCEP = new JLabel("CEP");
+		lblCEP.setForeground(new Color(192, 192, 192));
 		lblCEP.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblCEP.setBounds(592, 216, 79, 14);
 		getContentPane().add(lblCEP);
 
 		JLabel lblBairro = new JLabel("Bairro*");
+		lblBairro.setForeground(new Color(192, 192, 192));
 		lblBairro.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblBairro.setBounds(32, 256, 79, 14);
 		getContentPane().add(lblBairro);
 
 		JLabel lblCidade = new JLabel("Cidade*");
+		lblCidade.setForeground(new Color(192, 192, 192));
 		lblCidade.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblCidade.setBounds(592, 167, 82, 14);
 		getContentPane().add(lblCidade);
 
 		txtCidade = new JTextField();
-		txtCidade.setBackground(new Color(126, 134, 143));
+		txtCidade.setForeground(new Color(192, 192, 192));
+		txtCidade.setBackground(new Color(169, 169, 169));
 		txtCidade.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtCidade.setBounds(669, 164, 136, 20);
 		getContentPane().add(txtCidade);
@@ -350,19 +369,22 @@ public class Clientes extends JDialog {
 		txtCidade.setDocument(new Validador(10));
 
 		txtBairro = new JTextField();
-		txtBairro.setBackground(new Color(126, 134, 143));
+		txtBairro.setForeground(new Color(192, 192, 192));
+		txtBairro.setBackground(new Color(169, 169, 169));
 		txtBairro.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtBairro.setBounds(110, 254, 459, 20);
 		getContentPane().add(txtBairro);
 		txtBairro.setColumns(10);
 
 		JLabel lblNumero = new JLabel("Nº *");
+		lblNumero.setForeground(new Color(192, 192, 192));
 		lblNumero.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblNumero.setBounds(592, 257, 46, 14);
 		getContentPane().add(lblNumero);
 
 		txtNumero = new JTextField();
-		txtNumero.setBackground(new Color(126, 134, 143));
+		txtNumero.setForeground(new Color(192, 192, 192));
+		txtNumero.setBackground(new Color(169, 169, 169));
 		txtNumero.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtNumero.setBounds(633, 254, 69, 20);
 		getContentPane().add(txtNumero);
@@ -371,17 +393,20 @@ public class Clientes extends JDialog {
 		txtNumero.setDocument(new Validador(10));
 
 		JLabel lblUf = new JLabel("UF*");
+		lblUf.setForeground(new Color(192, 192, 192));
 		lblUf.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblUf.setBounds(727, 256, 46, 14);
 		getContentPane().add(lblUf);
 
 		JLabel lblComplemento = new JLabel("Complemento");
+		lblComplemento.setForeground(new Color(192, 192, 192));
 		lblComplemento.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblComplemento.setBounds(32, 305, 110, 14);
 		getContentPane().add(lblComplemento);
 
 		txtComplemento = new JTextField();
-		txtComplemento.setBackground(new Color(126, 134, 143));
+		txtComplemento.setForeground(new Color(192, 192, 192));
+		txtComplemento.setBackground(new Color(169, 169, 169));
 		txtComplemento.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtComplemento.setBounds(130, 303, 439, 20);
 		getContentPane().add(txtComplemento);

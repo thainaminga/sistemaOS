@@ -47,7 +47,7 @@ public class Sobre extends JDialog {
 	 * Create the dialog.
 	 */
 	public Sobre() {
-		getContentPane().setBackground(new Color(64, 128, 128));
+		getContentPane().setBackground(new Color(128, 128, 128));
 		setModal(true);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Sobre.class.getResource("/img/about.png")));
 		setTitle("Sobre");
@@ -55,11 +55,13 @@ public class Sobre extends JDialog {
 		getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Autor: Thaina J.M. Santos");
+		lblNewLabel.setForeground(new Color(192, 192, 192));
 		lblNewLabel.setFont(new Font("Bodoni MT", Font.ITALIC, 15));
 		lblNewLabel.setBounds(10, 308, 276, 14);
 		getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Sob a Licença MIT");
+		lblNewLabel_1.setForeground(new Color(0, 0, 0));
 		lblNewLabel_1.setFont(new Font("Bodoni MT", Font.ITALIC, 15));
 		lblNewLabel_1.setBounds(339, 256, 171, 14);
 		getContentPane().add(lblNewLabel_1);
@@ -70,6 +72,7 @@ public class Sobre extends JDialog {
 		getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Relojoaria");
+		lblNewLabel_3.setForeground(new Color(192, 192, 192));
 		lblNewLabel_3.setFont(new Font("Bodoni MT", Font.ITALIC, 30));
 		lblNewLabel_3.setBounds(163, 22, 222, 71);
 		getContentPane().add(lblNewLabel_3);
@@ -80,12 +83,14 @@ public class Sobre extends JDialog {
 		getContentPane().add(lblLogo);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("TTP");
+		lblNewLabel_1_1.setForeground(new Color(192, 192, 192));
 		lblNewLabel_1_1.setFont(new Font("Bodoni MT", Font.ITALIC, 15));
 		lblNewLabel_1_1.setBounds(81, 263, 46, 14);
 		getContentPane().add(lblNewLabel_1_1);
 		
 		JTextPane txtpnPolticaDeConsertos = new JTextPane();
-		txtpnPolticaDeConsertos.setBackground(new Color(140, 159, 166));
+		txtpnPolticaDeConsertos.setForeground(new Color(255, 255, 255));
+		txtpnPolticaDeConsertos.setBackground(new Color(169, 169, 169));
 		txtpnPolticaDeConsertos.setEditable(false);
 		txtpnPolticaDeConsertos.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 		txtpnPolticaDeConsertos.setFont(new Font("Bodoni MT", Font.ITALIC, 15));
@@ -111,6 +116,7 @@ public class Sobre extends JDialog {
 		getContentPane().add(btnGit);
 		
 		JLabel lblNewLabel_4 = new JLabel("Acesso para o Github.");
+		lblNewLabel_4.setForeground(new Color(192, 192, 192));
 		lblNewLabel_4.setBounds(180, 142, 149, 35);
 		getContentPane().add(lblNewLabel_4);
 		

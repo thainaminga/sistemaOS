@@ -89,7 +89,7 @@ public class Principal extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 641, 608);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(64, 128, 128));
+		contentPane.setBackground(new Color(128, 128, 128));
 		contentPane.setBorder(null);
 
 		setContentPane(contentPane);
@@ -135,11 +135,13 @@ public class Principal extends JFrame {
 		contentPane.add(lblLogo);
 
 		JLabel lblNewLabel = new JLabel("Relojoaria");
+		lblNewLabel.setForeground(new Color(192, 192, 192));
 		lblNewLabel.setFont(new Font("Bodoni MT", Font.ITALIC, 30));
 		lblNewLabel.setBounds(228, 11, 172, 59);
 		contentPane.add(lblNewLabel);
 
 		JLabel lblNewLabel_1 = new JLabel("            TTP");
+		lblNewLabel_1.setForeground(new Color(192, 192, 192));
 		lblNewLabel_1.setFont(new Font("Bodoni MT", Font.ITALIC, 15));
 		lblNewLabel_1.setBounds(231, 351, 125, 14);
 		contentPane.add(lblNewLabel_1);

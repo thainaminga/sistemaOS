@@ -38,6 +38,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 import model.DAO;
 import javax.swing.ImageIcon;
 import javax.swing.border.EmptyBorder;
+import javax.swing.UIManager;
 
 public class Servicos extends JDialog {
 	private JTextField txtOS;
@@ -78,7 +79,8 @@ public class Servicos extends JDialog {
 	 * Create the dialog.
 	 */
 	public Servicos() {
-		getContentPane().setBackground(new Color(64, 128, 128));
+		setTitle("Serviços");
+		getContentPane().setBackground(new Color(128, 128, 128));
 		getContentPane().addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -91,48 +93,56 @@ public class Servicos extends JDialog {
 		getContentPane().setLayout(null);
 		
 		JLabel lblOS = new JLabel("OS*");
+		lblOS.setForeground(new Color(192, 192, 192));
 		lblOS.setBounds(28, 25, 46, 20);
 		getContentPane().add(lblOS);
 		
 		txtOS = new JTextField();
+		txtOS.setForeground(new Color(192, 192, 192));
 		txtOS.setBorder(new EmptyBorder(0, 0, 0, 0));
-		txtOS.setBackground(new Color(126, 134, 143));
+		txtOS.setBackground(new Color(169, 169, 169));
 		txtOS.setEditable(false);
 		txtOS.setBounds(28, 45, 139, 20);
 		getContentPane().add(txtOS);
 		txtOS.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("Data*");
+		lblNewLabel.setForeground(new Color(192, 192, 192));
 		lblNewLabel.setBounds(28, 85, 213, 22);
 		getContentPane().add(lblNewLabel);
 		
 		txtData = new JTextField();
+		txtData.setForeground(new Color(192, 192, 192));
 		txtData.setBorder(new EmptyBorder(0, 0, 0, 0));
-		txtData.setBackground(new Color(126, 134, 143));
+		txtData.setBackground(new Color(169, 169, 169));
 		txtData.setEditable(false);
 		txtData.setBounds(28, 104, 234, 22);
 		getContentPane().add(txtData);
 		txtData.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("Bijuteria*");
+		lblNewLabel_1.setForeground(new Color(192, 192, 192));
 		lblNewLabel_1.setBounds(254, 148, 144, 20);
 		getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Valor");
+		lblNewLabel_2.setForeground(new Color(192, 192, 192));
 		lblNewLabel_2.setBounds(28, 148, 46, 20);
 		getContentPane().add(lblNewLabel_2);
 		
 		txtEquipamento = new JTextField();
+		txtEquipamento.setForeground(new Color(192, 192, 192));
 		txtEquipamento.setBorder(new EmptyBorder(0, 0, 0, 0));
-		txtEquipamento.setBackground(new Color(126, 134, 143));
+		txtEquipamento.setBackground(new Color(169, 169, 169));
 		txtEquipamento.setCursor(Cursor.getPredefinedCursor(Cursor.TEXT_CURSOR));
 		txtEquipamento.setBounds(254, 167, 234, 20);
 		getContentPane().add(txtEquipamento);
 		txtEquipamento.setColumns(10);
 		
 		txtValor = new JTextField();
+		txtValor.setForeground(new Color(192, 192, 192));
 		txtValor.setBorder(new EmptyBorder(0, 0, 0, 0));
-		txtValor.setBackground(new Color(126, 134, 143));
+		txtValor.setBackground(new Color(169, 169, 169));
 		txtValor.setBounds(28, 168, 209, 20);
 		getContentPane().add(txtValor);
 		txtValor.setColumns(10);
@@ -194,12 +204,14 @@ public class Servicos extends JDialog {
 		getContentPane().add(btnExcluir);
 		
 		JLabel lblNewLabel_3 = new JLabel("Defeito*");
+		lblNewLabel_3.setForeground(new Color(192, 192, 192));
 		lblNewLabel_3.setBounds(28, 223, 57, 17);
 		getContentPane().add(lblNewLabel_3);
 		
 		txtDefeito = new JTextField();
+		txtDefeito.setForeground(new Color(192, 192, 192));
 		txtDefeito.setBorder(new EmptyBorder(0, 0, 0, 0));
-		txtDefeito.setBackground(new Color(126, 134, 143));
+		txtDefeito.setBackground(new Color(169, 169, 169));
 		txtDefeito.setBounds(28, 238, 460, 64);
 		getContentPane().add(txtDefeito);
 		txtDefeito.setColumns(10);
@@ -218,6 +230,7 @@ public class Servicos extends JDialog {
 		getContentPane().add(btnLimpar);
 		
 		JPanel panel = new JPanel();
+		panel.setForeground(new Color(192, 192, 192));
 		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Cliente", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel.setBounds(272, 28, 206, 99);
 		getContentPane().add(panel);
@@ -225,7 +238,7 @@ public class Servicos extends JDialog {
 		
 		txtCliente = new JTextField();
 		txtCliente.setBorder(new EmptyBorder(0, 0, 0, 0));
-		txtCliente.setBackground(new Color(126, 134, 143));
+		txtCliente.setBackground(new Color(169, 169, 169));
 		txtCliente.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent e) {
@@ -238,7 +251,8 @@ public class Servicos extends JDialog {
 		panel.add(scrollPaneClientes);
 		
 		listClientes = new JList();
-		listClientes.setBackground(new Color(126, 134, 143));
+		listClientes.setForeground(new Color(192, 192, 192));
+		listClientes.setBackground(new Color(169, 169, 169));
 		listClientes.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {

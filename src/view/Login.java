@@ -27,6 +27,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.Cursor;
 import java.awt.SystemColor;
+import javax.swing.UIManager;
 
 public class Login extends JFrame {
 	// objetos JDBC
@@ -62,6 +63,7 @@ public class Login extends JFrame {
 	 * Create the frame.
 	 */
 	public Login() {
+		setTitle("Login");
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowActivated(WindowEvent e) {
@@ -80,12 +82,14 @@ public class Login extends JFrame {
 		contentPane.setLayout(null);
 
 		JLabel lblNewLabel = new JLabel("Login: ");
+		lblNewLabel.setForeground(new Color(192, 192, 192));
 		lblNewLabel.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblNewLabel.setBounds(146, 58, 79, 20);
 		contentPane.add(lblNewLabel);
 
 		txtLogin = new JTextField();
-		txtLogin.setBackground(new Color(126, 134, 143));
+		txtLogin.setForeground(new Color(192, 192, 192));
+		txtLogin.setBackground(new Color(169, 169, 169));
 		txtLogin.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtLogin.setBounds(202, 59, 293, 20);
 		contentPane.add(txtLogin);
@@ -94,12 +98,14 @@ public class Login extends JFrame {
 		txtLogin.setDocument(new Validador(30));
 
 		JLabel lblNewLabel_1 = new JLabel("Senha: ");
+		lblNewLabel_1.setForeground(new Color(192, 192, 192));
 		lblNewLabel_1.setFont(new Font("Bodoni MT", Font.BOLD, 15));
 		lblNewLabel_1.setBounds(146, 123, 94, 14);
 		contentPane.add(lblNewLabel_1);
 
 		txtSenha = new JPasswordField();
-		txtSenha.setBackground(new Color(126, 134, 143));
+		txtSenha.setForeground(new Color(192, 192, 192));
+		txtSenha.setBackground(new Color(169, 169, 169));
 		txtSenha.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtSenha.setBounds(202, 121, 185, 20);
 		contentPane.add(txtSenha);
