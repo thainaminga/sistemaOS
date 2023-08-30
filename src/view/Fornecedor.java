@@ -111,7 +111,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(lblID);
 
 		txtID = new JTextField();
-		txtID.setForeground(new Color(192, 192, 192));
+		txtID.setForeground(new Color(255, 255, 255));
 		txtID.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtID.setBounds(62, 49, 110, 20);
 		txtID.setEditable(false);
@@ -126,7 +126,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(lblNomeEmpresa);
 
 		txtNome = new JTextField();
-		txtNome.setForeground(new Color(192, 192, 192));
+		txtNome.setForeground(new Color(255, 255, 255));
 		txtNome.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtNome.setBounds(209, 49, 280, 20);
 		txtNome.addKeyListener(new KeyAdapter() {
@@ -148,7 +148,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(lblCnpj);
 
 		txtCNPJ = new JTextField();
-		txtCNPJ.setForeground(new Color(192, 192, 192));
+		txtCNPJ.setForeground(new Color(255, 255, 255));
 		txtCNPJ.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtCNPJ.setBounds(677, 105, 147, 20);
 		txtCNPJ.addKeyListener(new KeyAdapter() {
@@ -173,7 +173,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(lblEmail);
 
 		txtEmail = new JTextField();
-		txtEmail.setForeground(new Color(192, 192, 192));
+		txtEmail.setForeground(new Color(255, 255, 255));
 		txtEmail.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtEmail.setBounds(62, 105, 427, 20);
 		txtEmail.setColumns(10);
@@ -189,7 +189,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(lblEndereco);
 
 		txtEndereco = new JTextField();
-		txtEndereco.setForeground(new Color(192, 192, 192));
+		txtEndereco.setForeground(new Color(255, 255, 255));
 		txtEndereco.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtEndereco.setBounds(62, 205, 427, 20);
 		txtEndereco.setColumns(10);
@@ -204,7 +204,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(lblBairro);
 
 		txtBairro = new JTextField();
-		txtBairro.setForeground(new Color(192, 192, 192));
+		txtBairro.setForeground(new Color(255, 255, 255));
 		txtBairro.setBackground(new Color(169, 169, 169));
 		txtBairro.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtBairro.setBounds(62, 264, 427, 20);
@@ -220,7 +220,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(lblComplemento);
 
 		txtComplemento = new JTextField();
-		txtComplemento.setForeground(new Color(192, 192, 192));
+		txtComplemento.setForeground(new Color(255, 255, 255));
 		txtComplemento.setBackground(new Color(169, 169, 169));
 		txtComplemento.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtComplemento.setBounds(62, 320, 427, 20);
@@ -230,7 +230,7 @@ public class Fornecedor extends JDialog {
 		txtComplemento.setDocument(new Validador(20));
 
 		txtNumero = new JTextField();
-		txtNumero.setForeground(new Color(192, 192, 192));
+		txtNumero.setForeground(new Color(255, 255, 255));
 		txtNumero.setBackground(new Color(169, 169, 169));
 		txtNumero.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtNumero.setBounds(538, 320, 69, 20);
@@ -262,7 +262,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(btnBuscarCep);
 
 		txtCep = new JTextField();
-		txtCep.setForeground(new Color(192, 192, 192));
+		txtCep.setForeground(new Color(255, 255, 255));
 		txtCep.setBackground(new Color(169, 169, 169));
 		txtCep.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtCep.setBounds(538, 264, 136, 20);
@@ -293,7 +293,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(lblCidade);
 
 		txtCidade = new JTextField();
-		txtCidade.setForeground(new Color(192, 192, 192));
+		txtCidade.setForeground(new Color(255, 255, 255));
 		txtCidade.setBackground(new Color(169, 169, 169));
 		txtCidade.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtCidade.setBounds(538, 205, 136, 20);
@@ -309,7 +309,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(lblFone);
 
 		txtFone = new JTextField();
-		txtFone.setForeground(new Color(192, 192, 192));
+		txtFone.setForeground(new Color(255, 255, 255));
 		txtFone.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtFone.setBounds(538, 105, 117, 20);
 		txtFone.setColumns(10);
@@ -391,6 +391,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(scrollPaneFornecedor);
 
 		listFornecedor = new JList();
+		listFornecedor.setForeground(new Color(255, 255, 255));
 		listFornecedor.setBackground(new Color(192, 192, 192));
 		listFornecedor.addMouseListener(new MouseAdapter() {
 			@Override
@@ -407,7 +408,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(lblFantasi);
 
 		txtFantasia = new JTextField();
-		txtFantasia.setForeground(new Color(192, 192, 192));
+		txtFantasia.setForeground(new Color(255, 255, 255));
 		txtFantasia.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtFantasia.setBounds(538, 49, 286, 20);
 		txtFantasia.setColumns(10);
@@ -421,7 +422,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(lblNewLabel);
 
 		txtIE = new JTextField();
-		txtIE.setForeground(new Color(192, 192, 192));
+		txtIE.setForeground(new Color(255, 255, 255));
 		txtIE.setBackground(new Color(169, 169, 169));
 		txtIE.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtIE.setBounds(617, 320, 57, 20);
@@ -435,7 +436,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(lblSite);
 
 		txtSite = new JTextField();
-		txtSite.setForeground(new Color(192, 192, 192));
+		txtSite.setForeground(new Color(255, 255, 255));
 		txtSite.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtSite.setColumns(10);
 		txtSite.setBackground(new Color(169, 169, 169));
@@ -449,7 +450,7 @@ public class Fornecedor extends JDialog {
 		contentPanel.add(lblNomeVendedor);
 
 		txtVendedor = new JTextField();
-		txtVendedor.setForeground(new Color(192, 192, 192));
+		txtVendedor.setForeground(new Color(255, 255, 255));
 		txtVendedor.setBackground(new Color(169, 169, 169));
 		txtVendedor.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtVendedor.setColumns(10);

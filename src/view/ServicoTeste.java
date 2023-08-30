@@ -49,8 +49,22 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
 import model.DAO;
+import javax.swing.JDesktopPane;
+import javax.swing.JInternalFrame;
+import javax.swing.JTable;
+import javax.swing.DebugGraphics;
+import java.awt.Component;
+import javax.swing.Box;
+import javax.swing.JEditorPane;
+import javax.swing.JTextPane;
+import javax.swing.JTree;
+import javax.swing.JProgressBar;
+import javax.swing.JSeparator;
+import javax.swing.SwingConstants;
+import javax.swing.JSlider;
+import java.awt.Choice;
 
-public class Servicos extends JDialog {
+public class ServicoTeste extends JDialog {
 	private JTextField txtOS;
 	private JTextField txtData;
 	private JTextField txtEquipamento;
@@ -66,7 +80,6 @@ public class Servicos extends JDialog {
 	private JLabel lblID;
 	private JScrollPane scrollPaneClientes;
 	private JList listClientes;
-	private JTextField txtDiagnostico;
 
 	/**
 	 * Launch the application.
@@ -75,7 +88,7 @@ public class Servicos extends JDialog {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Servicos dialog = new Servicos();
+					ServicoTeste dialog = new ServicoTeste();
 					dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 					dialog.setVisible(true);
 				} catch (Exception e) {
@@ -88,7 +101,7 @@ public class Servicos extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public Servicos() {
+	public ServicoTeste() {
 		setTitle("Serviços");
 		getContentPane().setBackground(new Color(128, 128, 128));
 		getContentPane().addMouseListener(new MouseAdapter() {
@@ -97,9 +110,9 @@ public class Servicos extends JDialog {
 				scrollPaneClientes.setVisible(false);
 			}
 		});
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Servicos.class.getResource("/img/serviço.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(ServicoTeste.class.getResource("/img/serviço.png")));
 		setModal(true);
-		setBounds(100, 100, 544, 533);
+		setBounds(100, 100, 800, 600);
 		getContentPane().setLayout(null);
 
 		JLabel lblOS = new JLabel("OS*");
@@ -161,7 +174,7 @@ public class Servicos extends JDialog {
 		btnBuscar.setContentAreaFilled(false);
 		btnBuscar.setBorder(null);
 		btnBuscar.setToolTipText("Buscar");
-		btnBuscar.setIcon(new ImageIcon(Servicos.class.getResource("/img/pesquisar.png")));
+		btnBuscar.setIcon(new ImageIcon(ServicoTeste.class.getResource("/img/pesquisar.png")));
 		btnBuscar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnBuscar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -177,66 +190,66 @@ public class Servicos extends JDialog {
 		JButton bntAdicionar = new JButton("");
 		bntAdicionar.setContentAreaFilled(false);
 		bntAdicionar.setBorder(null);
-		bntAdicionar.setIcon(new ImageIcon(Servicos.class.getResource("/img/add.png")));
+		bntAdicionar.setIcon(new ImageIcon(ServicoTeste.class.getResource("/img/add.png")));
 		bntAdicionar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		bntAdicionar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				adicionar();
 			}
 		});
-		bntAdicionar.setBounds(28, 423, 48, 48);
+		bntAdicionar.setBounds(51, 472, 48, 48);
 		getContentPane().add(bntAdicionar);
 
 		JButton bntEditar = new JButton("");
 		bntEditar.setContentAreaFilled(false);
 		bntEditar.setBorder(null);
-		bntEditar.setIcon(new ImageIcon(Servicos.class.getResource("/img/edit (2).png")));
+		bntEditar.setIcon(new ImageIcon(ServicoTeste.class.getResource("/img/edit (2).png")));
 		bntEditar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		bntEditar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				editarOS();
 			}
 		});
-		bntEditar.setBounds(138, 423, 48, 48);
+		bntEditar.setBounds(193, 472, 48, 48);
 		getContentPane().add(bntEditar);
 
 		JButton btnExcluir = new JButton("");
 		btnExcluir.setContentAreaFilled(false);
 		btnExcluir.setBorder(null);
-		btnExcluir.setIcon(new ImageIcon(Servicos.class.getResource("/img/delete (2).png")));
+		btnExcluir.setIcon(new ImageIcon(ServicoTeste.class.getResource("/img/delete (2).png")));
 		btnExcluir.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnExcluir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				excluirOS();
 			}
 		});
-		btnExcluir.setBounds(342, 423, 48, 48);
+		btnExcluir.setBounds(512, 472, 48, 48);
 		getContentPane().add(btnExcluir);
 
 		JLabel lblNewLabel_3 = new JLabel("Defeito*");
 		lblNewLabel_3.setForeground(new Color(192, 192, 192));
-		lblNewLabel_3.setBounds(28, 289, 93, 32);
+		lblNewLabel_3.setBounds(28, 223, 57, 17);
 		getContentPane().add(lblNewLabel_3);
 
 		txtDefeito = new JTextField();
 		txtDefeito.setForeground(new Color(255, 255, 255));
 		txtDefeito.setBorder(new EmptyBorder(0, 0, 0, 0));
 		txtDefeito.setBackground(new Color(169, 169, 169));
-		txtDefeito.setBounds(28, 319, 460, 75);
+		txtDefeito.setBounds(51, 276, 460, 115);
 		getContentPane().add(txtDefeito);
 		txtDefeito.setColumns(10);
 
 		JButton btnLimpar = new JButton("");
 		btnLimpar.setContentAreaFilled(false);
 		btnLimpar.setBorder(null);
-		btnLimpar.setIcon(new ImageIcon(Servicos.class.getResource("/img/borracha.png")));
+		btnLimpar.setIcon(new ImageIcon(ServicoTeste.class.getResource("/img/borracha.png")));
 		btnLimpar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnLimpar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				LimparCampos();
 			}
 		});
-		btnLimpar.setBounds(440, 423, 48, 48);
+		btnLimpar.setBounds(672, 472, 48, 48);
 		getContentPane().add(btnLimpar);
 
 		JPanel panel = new JPanel();
@@ -298,27 +311,14 @@ public class Servicos extends JDialog {
 		btnOS.setContentAreaFilled(false);
 		btnOS.setBorder(null);
 		btnOS.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnOS.setIcon(new ImageIcon(Servicos.class.getResource("/img/imprimir.png")));
+		btnOS.setIcon(new ImageIcon(ServicoTeste.class.getResource("/img/imprimir.png")));
 		btnOS.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				imprimirOS();
 			}
 		});
-		btnOS.setBounds(245, 423, 48, 48);
+		btnOS.setBounds(350, 472, 48, 48);
 		getContentPane().add(btnOS);
-
-		JLabel lblNewLabel_3_1 = new JLabel("Diagnóstico Técnico*");
-		lblNewLabel_3_1.setForeground(Color.LIGHT_GRAY);
-		lblNewLabel_3_1.setBounds(28, 201, 173, 27);
-		getContentPane().add(lblNewLabel_3_1);
-
-		txtDiagnostico = new JTextField();
-		txtDiagnostico.setForeground(Color.WHITE);
-		txtDiagnostico.setColumns(10);
-		txtDiagnostico.setBorder(new EmptyBorder(0, 0, 0, 0));
-		txtDiagnostico.setBackground(new Color(169, 169, 169));
-		txtDiagnostico.setBounds(28, 231, 460, 47);
-		getContentPane().add(txtDiagnostico);
 
 	}
 
@@ -327,7 +327,6 @@ public class Servicos extends JDialog {
 		txtOS.setText(null);
 		txtData.setText(null);
 		txtEquipamento.setText(null);
-		txtDiagnostico.setText(null);
 		txtDefeito.setText(null);
 		txtValor.setText(null);
 		txtID.setText(null);
@@ -362,9 +361,8 @@ public class Servicos extends JDialog {
 				txtData.setText(rs.getString(2));//
 				txtEquipamento.setText(rs.getString(3));//
 				txtDefeito.setText(rs.getString(4));//
-				txtDiagnostico.setText(rs.getString(5));//
-				txtValor.setText(rs.getString(6));//
-				txtID.setText(rs.getString(7));//
+				txtValor.setText(rs.getString(5));//
+				txtID.setText(rs.getString(6));//
 				txtCliente.setText(rs.getString(8));//
 
 				// btnEditar.setEnabled(true);
@@ -393,7 +391,7 @@ public class Servicos extends JDialog {
 
 		} else {
 
-			String create = "insert into servicos (equipamento,defeito,diagnostico,valor,idcli)values (?,?,?,?,?)";
+			String create = "insert into servicos (equipamento,defeito,valor,idcli)values (?,?,?,?)";
 
 			try {
 
@@ -403,9 +401,8 @@ public class Servicos extends JDialog {
 
 				pst.setString(1, txtEquipamento.getText());
 				pst.setString(2, txtDefeito.getText());
-				pst.setString(3, txtDiagnostico.getText());
-				pst.setString(4, txtValor.getText());
-				pst.setString(5, txtID.getText());
+				pst.setString(3, txtValor.getText());
+				pst.setString(4, txtID.getText());
 
 				pst.executeUpdate();
 
@@ -440,7 +437,7 @@ public class Servicos extends JDialog {
 		} else {
 			// logica principal
 			// CRUD - Update
-			String update = "update servicos set os =?, equipamento=?, defeito=?, diagnostico=? where idcli=?";
+			String update = "update servicos set os =?, equipamento=?, defeito=? where idcli=?";
 			// trat de exceção
 			try {
 				// abrir conexão
@@ -450,8 +447,7 @@ public class Servicos extends JDialog {
 				pst.setString(1, txtOS.getText());
 				pst.setString(2, txtEquipamento.getText());
 				pst.setString(3, txtDefeito.getText());
-				pst.setString(4, txtDiagnostico.getText());
-				pst.setString(5, txtID.getText());
+				pst.setString(4, txtID.getText());
 				// Executar query
 				pst.executeUpdate();
 				// confirmar para o user
@@ -577,152 +573,92 @@ public class Servicos extends JDialog {
 	 * Impressão da OS
 	 */
 	private void imprimirOS() {
-		if (txtEquipamento.getText().isEmpty() || txtDefeito.getText().isEmpty() || txtValor.getText().isEmpty()) {
-			JOptionPane.showMessageDialog(null, "Preencha todos os campos antes de gerar o relatório");
-			return;
-		}
+	    if (txtEquipamento.getText().isEmpty() || txtDefeito.getText().isEmpty() || txtValor.getText().isEmpty()) {
+	        JOptionPane.showMessageDialog(null, "Preencha todos os campos antes de gerar o relatório");
+	        return;
+	    }
 
-		Document document = new Document();
+	    Document document = new Document();
 
-		try {
-			PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("os.pdf"));
-			document.open();
+	    try {
+	        PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("os.pdf"));
+	        document.open();
 
-			// Adicionar imagem abaixo do cabeçalho
-			Image logo = Image.getInstance(Servicos.class.getResource("/img/TTP.png"));
-			logo.scaleToFit(192, 148);
-			logo.setAlignment(Element.ALIGN_CENTER);
-			document.add(logo);
-			document.add(Chunk.NEWLINE);
+	        // Adicionar imagem abaixo do cabeçalho
+	        Image logo = Image.getInstance(ServicoTeste.class.getResource("/img/TTP.png"));
+	        logo.scaleToFit(192, 148);
+	        logo.setAlignment(Element.ALIGN_CENTER);
+	        document.add(logo);
+	        document.add(Chunk.NEWLINE);
 
-			// Adicionar cabeçalho
-			Paragraph header = new Paragraph("Ordem de Serviço",
-					FontFactory.getFont(FontFactory.HELVETICA, 20, Font.BOLD));
-			header.setAlignment(Element.ALIGN_CENTER);
-			document.add(header);
+	        // Adicionar cabeçalho
+	        Paragraph header = new Paragraph("Ordem de Serviço", FontFactory.getFont(FontFactory.HELVETICA, 20, Font.BOLD));
+	        header.setAlignment(Element.ALIGN_CENTER);
+	        document.add(header);
 
-			// Adicionar detalhes da OS
-			String readOS = "SELECT * FROM servicos WHERE os = ?";
-			try (Connection con = dao.conectar(); PreparedStatement pst = con.prepareStatement(readOS)) {
-				pst.setString(1, txtOS.getText());
-				try (ResultSet rs = pst.executeQuery()) {
-					if (rs.next()) {
+	        
+	        // Adicionar detalhes da OS
+	        String readOS = "SELECT * FROM servicos WHERE os = ?";
+	        try (Connection con = dao.conectar(); PreparedStatement pst = con.prepareStatement(readOS)) {
+	            pst.setString(1, txtOS.getText());
+	            try (ResultSet rs = pst.executeQuery()) {
+	                if (rs.next()) {
+	                	
+	                    document.add(Chunk.NEWLINE);
+	                    Paragraph os = new Paragraph("Número da OS: " + rs.getString(1), FontFactory.getFont(FontFactory.HELVETICA, 12));
+	                    os.setAlignment(Element.ALIGN_LEFT);
+	                    document.add(os);
+	                    
+	                 // Adicionar informações do cliente
+	        	        Paragraph clienteInfo = new Paragraph("Cliente: " + txtCliente.getText(), FontFactory.getFont(FontFactory.HELVETICA, 12));
+	        	        clienteInfo.setAlignment(Element.ALIGN_LEFT);
+	        	        document.add(clienteInfo);
 
-						document.add(Chunk.NEWLINE);
-						Paragraph os = new Paragraph("Número da OS: " + rs.getString(1),
-								FontFactory.getFont(FontFactory.HELVETICA, 12));
-						os.setAlignment(Element.ALIGN_LEFT);
-						document.add(os);
-						
-						Paragraph paragrafo = new Paragraph(" " ,
-						FontFactory.getFont(FontFactory.HELVETICA, 12));
-						paragrafo.setAlignment(Element.ALIGN_RIGHT);
-						document.add(paragrafo);
 
-						// Adicionar informações do cliente
-//						Paragraph clienteInfo = new Paragraph("Cliente: " + txtCliente.getText(),
-//								FontFactory.getFont(FontFactory.HELVETICA, 12));
-//						clienteInfo.setAlignment(Element.ALIGN_LEFT);
-//						document.add(clienteInfo);
-//
-//						Paragraph data = new Paragraph("Data: " + rs.getString(2),
-//								FontFactory.getFont(FontFactory.HELVETICA, 12));
-//						data.setAlignment(Element.ALIGN_LEFT);
-//						document.add(data);
-//
-//						Paragraph equipamento = new Paragraph("Equipamento: " + rs.getString(3),
-//								FontFactory.getFont(FontFactory.HELVETICA, 12));
-//						equipamento.setAlignment(Element.ALIGN_LEFT);
-//						document.add(equipamento);
-//
-//						Paragraph defeito = new Paragraph("Defeito: " + rs.getString(4),
-//								FontFactory.getFont(FontFactory.HELVETICA, 12));
-//						defeito.setAlignment(Element.ALIGN_LEFT);
-//						document.add(defeito);
-//
-//						Paragraph diagnostico = new Paragraph("Diagnóstico Técnico: " + rs.getString(5),
-//								FontFactory.getFont(FontFactory.HELVETICA, 12));
-//						diagnostico.setAlignment(Element.ALIGN_LEFT);
-//						document.add(diagnostico);
-//
-//						Paragraph valor = new Paragraph("Valor Serviço: " + rs.getString(6),
-//								FontFactory.getFont(FontFactory.HELVETICA, 12));
-//						valor.setAlignment(Element.ALIGN_LEFT);
-//						document.add(valor);
-						
-						PdfPTable table = new PdfPTable(2); // 2 colunas
-						table.setWidthPercentage(80); // Largura da tabela em relação à página
-						table.setHorizontalAlignment(Element.ALIGN_LEFT);
-						 
-						Font contentFont = FontFactory.getFont(FontFactory.HELVETICA, 12, BaseColor.BLACK);
-						 
-						// Adicionar células à tabela
-						table.addCell(new PdfPCell(new Phrase("Cliente ", contentFont)));
-						table.addCell(new PdfPCell(new Phrase(rs.getString(7), contentFont)));
-						
-						table.addCell(new PdfPCell(new Phrase("Data de Criação da OS ", contentFont)));
-						table.addCell(new PdfPCell(new Phrase(rs.getString(2), contentFont)));
-						 
-						table.addCell(new PdfPCell(new Phrase("Equipamento ", contentFont)));
-						table.addCell(new PdfPCell(new Phrase(rs.getString(3), contentFont)));
-						 
-						table.addCell(new PdfPCell(new Phrase("Diagnóstico Técnico ", contentFont)));
-						table.addCell(new PdfPCell(new Phrase(rs.getString(5), contentFont)));
-						 
-						table.addCell(new PdfPCell(new Phrase("Defeito ", contentFont)));
-						table.addCell(new PdfPCell(new Phrase(rs.getString(4), contentFont)));
-						 
-						table.addCell(new PdfPCell(new Phrase("Valor ", contentFont)));
-						table.addCell(new PdfPCell(new Phrase(rs.getString(6), contentFont)));
-						 
-						// Adicionar a tabela ao documento
-						document.add(table);
-						
-						
-						Paragraph termosHeader = new Paragraph("Termos de Serviço",
-								FontFactory.getFont(FontFactory.HELVETICA, 16, Font.BOLD));
-						termosHeader.setAlignment(Element.ALIGN_LEFT);
-						document.add(termosHeader);
-						 
-						// Adicionar os termos específicos aqui
-						String termos = "1. O cliente concorda em pagar o valor total dos serviços prestados.\n"
-								+ "2. A empresa não é responsável por danos pré-existentes no equipamento.\n"
-								+ "3. O prazo de entrega pode variar de acordo com a complexidade do serviço.\n"
-								+ "4. Quaisquer reclamações devem ser feitas dentro de 7 dias após a conclusão do serviço.\n"
-								+ "5. A garantia não cobre danos causados por mau uso ou negligência do cliente.\n";
+	                    Paragraph data = new Paragraph("Data: " + rs.getString(2), FontFactory.getFont(FontFactory.HELVETICA, 12));
+	                    data.setAlignment(Element.ALIGN_LEFT);
+	                    document.add(data);
 
-						Paragraph termosParagraph = new Paragraph(termos, FontFactory.getFont(FontFactory.HELVETICA, 12));
-						termosParagraph.setAlignment(Element.ALIGN_LEFT);
-						document.add(termosParagraph);
+	                    Paragraph equipamento = new Paragraph("Equipamento: " + rs.getString(3), FontFactory.getFont(FontFactory.HELVETICA, 12));
+	                    equipamento.setAlignment(Element.ALIGN_LEFT);
+	                    document.add(equipamento);
 
-					} else {
-						JOptionPane.showMessageDialog(null, "Nenhuma OS encontrada para o número informado");
-						return;
-					}
-				}
-			}
+	                    Paragraph defeito = new Paragraph("Defeito: " + rs.getString(4), FontFactory.getFont(FontFactory.HELVETICA, 12));
+	                    defeito.setAlignment(Element.ALIGN_LEFT);
+	                    document.add(defeito);
+	                    
+	                    Paragraph valor = new Paragraph("Valor Serviço: " + rs.getString(5), FontFactory.getFont(FontFactory.HELVETICA, 12));
+	                    valor.setAlignment(Element.ALIGN_LEFT);
+	                    document.add(valor);
+	                     
+	                    
+	                } else {
+	                    JOptionPane.showMessageDialog(null, "Nenhuma OS encontrada para o número informado");
+	                    return;
+	                }
+	            }
+	        }
 
-			// Adicionar rodapé
-			PdfContentByte cb = writer.getDirectContent();
-			Phrase footer = new Phrase(
-					"Serviço gerado em: " + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date()),
-					FontFactory.getFont(FontFactory.HELVETICA, 10));
-			ColumnText.showTextAligned(cb, Element.ALIGN_CENTER, footer,
-					(document.right() - document.left()) / 2 + document.leftMargin(), document.bottom() - 10, 0);
+	        // Adicionar rodapé
+	        PdfContentByte cb = writer.getDirectContent();
+	        Phrase footer = new Phrase(
+	                "Serviço gerado em: " + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date()),
+	                FontFactory.getFont(FontFactory.HELVETICA, 10));
+	        ColumnText.showTextAligned(cb, Element.ALIGN_CENTER, footer,
+	                (document.right() - document.left()) / 2 + document.leftMargin(),
+	                document.bottom() - 10, 0);
 
-		} catch (Exception e) {
-			System.out.println("Erro: " + e.getMessage());
-			return;
-		} finally {
-			document.close();
-		}
+	    } catch (Exception e) {
+	        System.out.println("Erro: " + e.getMessage());
+	        return;
+	    } finally {
+	        document.close();
+	    }
 
-		try {
-			Desktop.getDesktop().open(new File("os.pdf"));
-		} catch (Exception e) {
-			System.out.println("Erro ao abrir o PDF: " + e.getMessage());
-		}
-
+	    try {
+	        Desktop.getDesktop().open(new File("os.pdf"));
+	    } catch (Exception e) {
+	        System.out.println("Erro ao abrir o PDF: " + e.getMessage());
+	    }
 	}
-
 }

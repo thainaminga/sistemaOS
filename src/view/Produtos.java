@@ -151,6 +151,7 @@ public class Produtos extends JDialog {
 		getContentPane().add(scrollPaneNome);
 
 		listNome = new JList();
+		listNome.setForeground(new Color(255, 255, 255));
 		listNome.setBackground(new Color(192, 192, 192));
 		listNome.addMouseListener(new MouseAdapter() {
 			@Override
@@ -164,6 +165,7 @@ public class Produtos extends JDialog {
 		getContentPane().add(scrollPaneProd);
 
 		listProdf = new JList();
+		listProdf.setForeground(new Color(255, 255, 255));
 		listProdf.setBackground(new Color(192, 192, 192));
 		listProdf.addMouseListener(new MouseAdapter() {
 			@Override
@@ -178,7 +180,7 @@ public class Produtos extends JDialog {
 		getContentPane().add(btnFoto);
 
 		txtBarras = new JTextField();
-		txtBarras.setForeground(new Color(192, 192, 192));
+		txtBarras.setForeground(new Color(255, 255, 255));
 		txtBarras.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
@@ -223,7 +225,7 @@ public class Produtos extends JDialog {
 		getContentPane().add(lblDescricao);
 
 		txtEstoqueMin = new JTextField();
-		txtEstoqueMin.setForeground(new Color(192, 192, 192));
+		txtEstoqueMin.setForeground(new Color(255, 255, 255));
 		txtEstoqueMin.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
@@ -252,7 +254,7 @@ public class Produtos extends JDialog {
 		getContentPane().add(lblEstoque);
 
 		txtEstoque = new JTextField();
-		txtEstoque.setForeground(new Color(192, 192, 192));
+		txtEstoque.setForeground(new Color(255, 255, 255));
 		txtEstoque.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
@@ -301,7 +303,7 @@ public class Produtos extends JDialog {
 		getContentPane().add(lblLocalDeArmazenagem);
 
 		txtArmazem = new JTextField();
-		txtArmazem.setForeground(new Color(192, 192, 192));
+		txtArmazem.setForeground(new Color(255, 255, 255));
 		txtArmazem.setFont(new Font("Arial", Font.PLAIN, 16));
 		txtArmazem.setColumns(10);
 		txtArmazem.setBorder(new EmptyBorder(0, 0, 0, 0));
@@ -319,7 +321,7 @@ public class Produtos extends JDialog {
 		getContentPane().add(lblEstoque_1_1);
 
 		txtValor = new JTextField();
-		txtValor.setForeground(new Color(192, 192, 192));
+		txtValor.setForeground(new Color(255, 255, 255));
 		txtValor.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
@@ -399,7 +401,7 @@ public class Produtos extends JDialog {
 		getContentPane().add(lblIDFor);
 
 		txtNomeFor = new JTextField();
-		txtNomeFor.setForeground(new Color(192, 192, 192));
+		txtNomeFor.setForeground(new Color(255, 255, 255));
 		txtNomeFor.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent e) {
@@ -437,7 +439,7 @@ public class Produtos extends JDialog {
 		getContentPane().add(btnApagar);
 
 		txtNome = new JTextField();
-		txtNome.setForeground(new Color(192, 192, 192));
+		txtNome.setForeground(new Color(255, 255, 255));
 		txtNome.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent e) {
@@ -464,7 +466,7 @@ public class Produtos extends JDialog {
 		btnPesq.setBorderPainted(false);
 
 		txtID = new JTextField();
-		txtID.setForeground(new Color(192, 192, 192));
+		txtID.setForeground(new Color(255, 255, 255));
 		txtID.setBounds(758, 76, 141, 29);
 		getContentPane().add(txtID);
 		txtID.setEditable(false);
@@ -510,7 +512,7 @@ public class Produtos extends JDialog {
 		getContentPane().add(lblNewLabel_5);
 
 		txtLucro = new JTextField();
-		txtLucro.setForeground(new Color(192, 192, 192));
+		txtLucro.setForeground(new Color(255, 255, 255));
 		txtLucro.setText("0");
 		txtLucro.addKeyListener(new KeyAdapter() {
 			@Override
@@ -532,7 +534,7 @@ public class Produtos extends JDialog {
 		getContentPane().add(txtLucro);
 
 		txtFabricante = new JTextField();
-		txtFabricante.setForeground(new Color(192, 192, 192));
+		txtFabricante.setForeground(new Color(255, 255, 255));
 		txtFabricante.setFont(new Font("Arial", Font.PLAIN, 16));
 		txtFabricante.setColumns(10);
 		txtFabricante.setBorder(new EmptyBorder(0, 0, 0, 0));
@@ -544,7 +546,7 @@ public class Produtos extends JDialog {
 		getContentPane().add(txtFabricante);
 
 		txtLote = new JTextField();
-		txtLote.setForeground(new Color(192, 192, 192));
+		txtLote.setForeground(new Color(255, 255, 255));
 		txtLote.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
@@ -576,7 +578,7 @@ public class Produtos extends JDialog {
 		getContentPane().add(dateVal);
 
 		txtDesc = new JTextArea();
-		txtDesc.setForeground(new Color(192, 192, 192));
+		txtDesc.setForeground(new Color(255, 255, 255));
 		txtDesc.setBackground(new Color(169, 169, 169));
 		txtDesc.setBounds(22, 191, 412, 79);
 
@@ -622,7 +624,7 @@ public class Produtos extends JDialog {
 		getContentPane().add(btnBusca);
 
 		txtIDFor = new JTextField();
-		txtIDFor.setForeground(Color.LIGHT_GRAY);
+		txtIDFor.setForeground(new Color(255, 255, 255));
 		txtIDFor.setFont(new Font("Arial", Font.PLAIN, 16));
 		txtIDFor.setColumns(10);
 		txtIDFor.setBorder(new EmptyBorder(0, 0, 0, 0));
